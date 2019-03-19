@@ -54,7 +54,7 @@ public class ProjectworkTest {
         driver.close();
     }    
   
-    @Test
+    //@Test
     public void testItexpsNavigation() throws Exception {
         driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
@@ -91,7 +91,7 @@ public class ProjectworkTest {
         driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
     }
 
-@Test
+//@Test
    public void testLogin() throws Exception {
         driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
@@ -126,13 +126,13 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys("test123");
         driver.findElement(By.id("memberLoginDialogokButton")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.id("DrpDwnMn05label")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.id("iew9cwvzactionTitle")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[@id=\"memberLoginDialogpasswordInputerrorMessage\"]"));
+        Thread.sleep(5000);
+        driver.findElement(By.id("memberLoginDialogxButton")).click();
     }
            
-@Test
+//@Test
     public void testSignupExists() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -163,7 +163,7 @@ public class ProjectworkTest {
     }
     
 
-@Test
+//@Test
     public void testSignupNew() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -187,7 +187,7 @@ public class ProjectworkTest {
 
     }
   
-@Test
+//@Test
     public void testAppoint2() throws Exception {
         driver.get("https://www.google.com/search?source=hp&ei=a2eIXJC4BIOUjwTnv7uYCQ&q=itexps&btnK=Google+Search&oq=itexps&gs_l=psy-ab.3..35i39j38.6127.8449..9669...2.0..0.130.506.6j1......0....1..gws-wiz.....6..0i131j0j0i10.S4RZNq7asjE#btnK=Google%20Search");
         driver.findElement(By.name("q")).click();
