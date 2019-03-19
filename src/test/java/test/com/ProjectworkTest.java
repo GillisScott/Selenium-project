@@ -168,8 +168,11 @@ public class ProjectworkTest {
        
     }
     
-
-@Test (priority-5)
+    /**
+     *
+     * @throws Exception
+     */
+    @Test (priority=5)
     public void testSignupNew() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
