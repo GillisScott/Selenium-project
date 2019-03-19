@@ -54,7 +54,7 @@ public class ProjectworkTest {
         driver.close();
     }    
   
-@Test
+@Test (priority=0)
     public void testItexpsNavigation() throws Exception {
         driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
@@ -86,12 +86,12 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys("Band1t-Boy");
         driver.findElement(By.id("memberLoginDialogokButton")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"DrpDwnMn05label\"]")).click();
+        //driver.findElement(By.xpath("//*[@id=\"DrpDwnMn05label\"]")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
     }
 
-@Test
+@Test (priority=1)
    public void testLogin() throws Exception {
         driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
@@ -111,7 +111,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
     }
     
-@Test
+@Test (priority=3)
   public void testLoginFail() throws Exception {
          driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
@@ -132,7 +132,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogxButton")).click();
     }
            
-@Test
+@Test (priority=4)
     public void testSignupExists() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -169,7 +169,7 @@ public class ProjectworkTest {
     }
     
 
-@Test
+@Test (priority-5)
     public void testSignupNew() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -183,7 +183,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("signUpDialogemailInputinput")).click();
         driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).clear();
         Thread.sleep(2000);
-        driver.findElement(By.id("signUpDialogemailInputinput")).sendKeys("helloworld2@hotmail.com");
+        driver.findElement(By.id("signUpDialogemailInputinput")).sendKeys("helloworldx@hotmail.com");
         driver.findElement(By.id("signUpDialogpasswordInputinput")).click();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).clear();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).sendKeys("test123");    
@@ -193,7 +193,7 @@ public class ProjectworkTest {
 
     }
   
-@Test
+@Test (priority=6)
     public void testAppoint2() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
