@@ -126,8 +126,9 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys("test123");
         driver.findElement(By.id("memberLoginDialogokButton")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.id("DrpDwnMn05label")).click();
+        Thread.sleep(3000);
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
     }
            
@@ -192,13 +193,8 @@ public class ProjectworkTest {
         driver.findElement(By.name("q")).click();
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Web Result with Site Links'])[1]/following::h3[1]")).click();
-        // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | xpath=(.//*[normalize-space(text()) and normalize-space(.)='Web Result with Site Links'])[1]/following::h3[1] | ]]
         driver.findElement(By.id("DrpDwnMn06label")).click();
         Thread.sleep(3000);
-        // ERROR: Caught exception [ERROR: Unsupported command [selectFrame | index=0 | ]]
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Free Appointment'])[1]/following::button[1]")).click();
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Login'])[1]/following::div[6]")).click();
-        // ERROR: Caught exception [ERROR: Unsupported command [selectFrame | relative=parent | ]]
         driver.findElement(By.linkText("Give us your feedback")).click();
         Thread.sleep(5000);
     }
