@@ -142,8 +142,9 @@ public class ProjectworkTest {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Web Result with Site Links'])[1]/following::h3[1]")).click();
         Thread.sleep(2000);     // Using sleep() to allow Page to download and sync-up before continuing.
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.id("signUpDialogemailInputinput")).click();
+        Thread.sleep(5000);
+        //driver.findElement(By.id("signUpDialogemailInputinput")).click();
+        driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).clear();
         Thread.sleep(2000);
@@ -152,6 +153,9 @@ public class ProjectworkTest {
         driver.findElement(By.id("signUpDialogpasswordInputinput")).clear();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).sendKeys("Band1t-Boy");
         Thread.sleep(4000);
+        //*[@id="signUpDialogerrMsg"]
+        driver.findElement(By.xpath("//*[@id=\"signUpDialogerrMsg\"]"));
+        Thread.sleep(5000);
         driver.findElement(By.id("signUpDialogokButton")).click();
         Thread.sleep(4000);
         driver.findElement(By.id("signUpDialogswitchDialogLink")).click();
@@ -160,6 +164,8 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys("Band1t-Boy");
         driver.findElement(By.id("memberLoginDialogokButton")).click();
+        Thread.sleep(5000);
+       
     }
     
 
