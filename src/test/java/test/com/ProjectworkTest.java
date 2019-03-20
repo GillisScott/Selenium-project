@@ -57,24 +57,23 @@ public class ProjectworkTest {
 @Test (priority=0)
     public void testItexpsNavigation() throws Exception {
         driver.get("https://www.itexps.net/");
-        Thread.sleep(5000);
         // The following will traverse the ITEXPS Page Tabs and Login
         driver.findElement(By.id("DrpDwnMn00label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.id("DrpDwnMn01label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.id("DrpDwnMn02label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.id("DrpDwnMn03label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"DrpDwnMn04label\"]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"DrpDwnMn05label\"]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"DrpDwnMn06label\"]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"DrpDwnMn00label\"]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
         driver.findElement(By.id("signUpDialogswitchDialogLink")).click();
         driver.findElement(By.id("memberLoginDialogemailInputinput")).click();
@@ -85,9 +84,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
         driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys("Band1t-Boy");
         driver.findElement(By.id("memberLoginDialogokButton")).click();
-        Thread.sleep(2000);
-        //driver.findElement(By.xpath("//*[@id=\"DrpDwnMn05label\"]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
     }
 
@@ -111,9 +108,9 @@ public class ProjectworkTest {
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
     }
     
-@Test (priority=3)
+@Test (priority=2)
   public void testLoginFail() throws Exception {
-         driver.get("https://www.itexps.net/");
+        driver.get("https://www.itexps.net/");
         Thread.sleep(5000);
         driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
         Thread.sleep(5000);
@@ -132,7 +129,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogxButton")).click();
     }
            
-@Test (priority=4)
+@Test (priority=3)
     public void testSignupExists() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -140,20 +137,20 @@ public class ProjectworkTest {
         driver.findElement(By.name("q")).sendKeys("itexps");
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Web Result with Site Links'])[1]/following::h3[1]")).click();
-        Thread.sleep(2000);     // Using sleep() to allow Page to download and sync-up before continuing.
+        Thread.sleep(4000);     // Using sleep() to allow Page to download and sync-up before continuing.
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
         Thread.sleep(5000);
         //driver.findElement(By.id("signUpDialogemailInputinput")).click();
         driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).clear();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
+        driver.findElement(By.id("signUpDialogemailInputinput")).clear();
+        //driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).clear();
+        Thread.sleep(4000);
         driver.findElement(By.id("signUpDialogemailInputinput")).sendKeys("thestorm10@sbcglobal.net");
         driver.findElement(By.id("signUpDialogpasswordInputinput")).click();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).clear();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).sendKeys("Band1t-Boy");
         Thread.sleep(4000);
-        //*[@id="signUpDialogerrMsg"]
         driver.findElement(By.xpath("//*[@id=\"signUpDialogerrMsg\"]"));
         Thread.sleep(5000);
         driver.findElement(By.id("signUpDialogokButton")).click();
@@ -172,7 +169,7 @@ public class ProjectworkTest {
      *
      * @throws Exception
      */
-    @Test (priority=5)
+@Test (priority=4)
     public void testSignupNew() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
@@ -186,7 +183,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("signUpDialogemailInputinput")).click();
         driver.findElement(By.xpath("//*[@id=\"signUpDialogemailInputinput\"]")).clear();
         Thread.sleep(2000);
-        driver.findElement(By.id("signUpDialogemailInputinput")).sendKeys("helloworldx@hotmail.com");
+        driver.findElement(By.id("signUpDialogemailInputinput")).sendKeys("helloworldz@hotmail.com");
         driver.findElement(By.id("signUpDialogpasswordInputinput")).click();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).clear();
         driver.findElement(By.id("signUpDialogpasswordInputinput")).sendKeys("test123");    
@@ -196,7 +193,7 @@ public class ProjectworkTest {
 
     }
   
-@Test (priority=6)
+@Test (priority=5)
     public void testAppoint2() throws Exception {
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).click();
