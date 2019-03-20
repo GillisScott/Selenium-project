@@ -165,10 +165,7 @@ public class ProjectworkTest {
        
     }
     
-    /**
-     *
-     * @throws Exception
-     */
+
 @Test (priority=4)
     public void testSignupNew() throws Exception {
         driver.get("https://www.google.com/");
