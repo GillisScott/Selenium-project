@@ -6,7 +6,8 @@
 package test.com;
 
 /**
- *
+ * This class holds the user information related to the Login Page
+ * 
  * @author Hashim
  */
 public class LoginPage {
@@ -19,26 +20,50 @@ public class LoginPage {
         return "LoginPage{" + "username=" + username + ", password=" + password + '}';
     }
 
+    /**
+     *
+     * @return username
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     *
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     *
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
     
+    /**
+     *
+     * @return invPassword
+     */
     public String getInvPassword() {
         return invPassword;
     }
 
+    /**
+     *
+     * @param invPassword
+     */
     public void setInvPassword(String invPassword) {
         this.invPassword = invPassword;
     }

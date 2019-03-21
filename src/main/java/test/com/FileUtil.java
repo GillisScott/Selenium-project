@@ -6,11 +6,14 @@
 package test.com;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.StringTokenizer;
 
 /**
- *
+ * File Utility to extract user information from a file.
+ * 
  * @author Hashim
  */
 public class FileUtil {
@@ -18,9 +21,18 @@ public class FileUtil {
     LoginPage login;
     SignupPage signup;
     
+    /**
+     *  Constructor to invoke load file
+     */
     public FileUtil() {
         loadFile();
     }
+    
+    /**
+     *  Method to extract user credentials from a file
+     * 
+     *  @exception File not found, IO Exception
+     */   
     private void loadFile() {
         try {
             FileReader fr = new FileReader("C:\\data\\itexpsdata.txt");
@@ -74,19 +86,35 @@ public class FileUtil {
             br.close();
             fr.close();
              
+        } catch (FileNotFoundException e) {
+             e.printStackTrace(System.out);
+        } catch (IOException e) {
+            e.printStackTrace(System.out);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
     }
 
+    /**
+     *
+     * @return username
+     */
     public String getUsername(){
         return login.getUsername();
     }
     
+    /**
+     *
+     * @return password 
+     */
     public String getPassword() {
         return login.getPassword();
     }
     
+    /**
+     *
+     * @return invalid password
+     */
     public String getInvPassword() {
         return login.getInvPassword();
     }

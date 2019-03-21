@@ -20,25 +20,40 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
-*
-* @author Scott
+* Test cases to verify functionality of ITExps web application
+* 
+* @author Scott/Hashim
 */
 
 public class ProjectworkTest {
     
     private WebDriver driver;
     
+    /**
+     *
+     */
     public ProjectworkTest() {
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     @BeforeClass
     public static void setUpClass() throws Exception {
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     @AfterClass
     public static void tearDownClass() throws Exception {
     }
 
+    /**
+     *
+     */
     @BeforeMethod
     public void setUp() {
         
@@ -51,11 +66,19 @@ public class ProjectworkTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     @AfterMethod
     public void tearDownMethod() throws Exception {
         driver.close();
     }    
   
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=0)
     public void testItexpsNavigation() throws Exception {
         FileUtil fileutil = new FileUtil();
@@ -92,6 +115,10 @@ public class ProjectworkTest {
         driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=1)
     public void testLogin() throws Exception {
         FileUtil fileutil = new FileUtil();
@@ -114,6 +141,10 @@ public class ProjectworkTest {
         driver.findElement(By.id("iew9cwvzactionTitle")).click();
     }
     
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=2)
     public void testLoginFail() throws Exception {
         FileUtil fileutil = new FileUtil();
@@ -140,6 +171,10 @@ public class ProjectworkTest {
         driver.findElement(By.id("memberLoginDialogxButton")).click();
     }
            
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=3)
     public void testSignupExists() throws Exception {
         FileUtil fileutil = new FileUtil();
@@ -182,7 +217,10 @@ public class ProjectworkTest {
        
     }
     
-
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=4)
     public void testSignupNew() throws Exception {
         FileUtil fileutil = new FileUtil();
@@ -211,6 +249,10 @@ public class ProjectworkTest {
 
     }
   
+    /**
+     *
+     * @throws Exception
+     */
     @Test (priority=5)
     public void testAppoint2() throws Exception {
         driver.get("https://www.google.com/");
@@ -226,6 +268,12 @@ public class ProjectworkTest {
     }
    
     //@Test (priority=6)
+
+    /**
+     * Verify end to end Appointment booking (work in progress) 
+     * 
+     * @throws Exception
+     */
     public void testAppointment() throws Exception {
         driver.get("https://www.itexps.net/");
         
