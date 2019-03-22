@@ -292,7 +292,7 @@ public class ProjectworkTest {
         driver.switchTo().frame(0);
         driver.findElement(By.xpath("//*[@id=\"7da72496-1c7e-4256-a4a7-fedf355bfd93\"]/div[1]/bks-offering-tile/boost-service-tile/ng-include/div/div[2]/button")).click();
         //driver.findElement(By.xpath("//button[contains(.,'Book It')]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(7000);
 
         driver.findElement(By.xpath("//div[4]/div/table/tbody/tr/td[7]")).click();
         Thread.sleep(4000);
