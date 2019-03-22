@@ -59,8 +59,7 @@ public class ProjectworkTest {
         
         System.setProperty("webdriver.chrome.driver", "c:\\data\\chromedriver.exe");
         ChromeOptions chromeOptions= new ChromeOptions();
-        chromeOptions.setBinary("C:\\Users\\thest\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-        //chromeOptions.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        chromeOptions.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
         chromeOptions.addArguments("--start-maximized");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -76,6 +75,7 @@ public class ProjectworkTest {
     }    
   
     /**
+     * Verifies Itexps Webpage Navigation
      *
      * @throws Exception
      */
@@ -101,21 +101,23 @@ public class ProjectworkTest {
         Thread.sleep(4000);
         driver.findElement(By.xpath("//*[@id=\"DrpDwnMn00label\"]")).click();
         Thread.sleep(4000);
-        driver.findElement(By.id("iew9cwvzactionTitle")).click();
-        driver.findElement(By.id("signUpDialogswitchDialogLink")).click();
-        driver.findElement(By.id("memberLoginDialogemailInputinput")).click();
-        driver.findElement(By.id("memberLoginDialogemailInputinput")).clear();
-        driver.findElement(By.id("memberLoginDialogemailInputinput")).sendKeys(fileutil.login.getUsername());
-        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).click();
-        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).click();
-        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
-        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys(fileutil.login.getPassword());
-        driver.findElement(By.id("memberLoginDialogokButton")).click();
-        Thread.sleep(4000);
-        driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
+// Removing Login Functionality in this test case.
+//        driver.findElement(By.id("iew9cwvzactionTitle")).click();
+//        driver.findElement(By.id("signUpDialogswitchDialogLink")).click();
+//        driver.findElement(By.id("memberLoginDialogemailInputinput")).click();
+//        driver.findElement(By.id("memberLoginDialogemailInputinput")).clear();
+//        driver.findElement(By.id("memberLoginDialogemailInputinput")).sendKeys(fileutil.login.getUsername());
+//        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).click();
+//        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).click();
+//        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).clear();
+//        driver.findElement(By.id("memberLoginDialogpasswordInputinput")).sendKeys(fileutil.login.getPassword());
+//        driver.findElement(By.id("memberLoginDialogokButton")).click();
+//        Thread.sleep(4000);
+//        driver.findElement(By.xpath("//*[@id=\"iew9cwvzactionTitle\"]")).click();
     }
 
     /**
+     * Use Case verifies a successful Login Valid credentials - uses FileUtil Code.
      *
      * @throws Exception
      */
@@ -142,6 +144,7 @@ public class ProjectworkTest {
     }
     
     /**
+     * Use Case verifies a successful Login with Invalid credentials - uses FileUtil Code.
      *
      * @throws Exception
      */
@@ -172,6 +175,7 @@ public class ProjectworkTest {
     }
            
     /**
+     * Use Case verifies a successful Sign Up with existing credentials - uses FileUtil Code.
      *
      * @throws Exception
      */
@@ -218,6 +222,7 @@ public class ProjectworkTest {
     }
     
     /**
+     * Use Case verifies a successful Sign Up with New user credentials - uses FileUtil Code.
      *
      * @throws Exception
      */
@@ -250,6 +255,7 @@ public class ProjectworkTest {
     }
   
     /**
+     * Use case traverses the Appointment Tab and ends with "Give us feedback."
      *
      * @throws Exception
      */
@@ -267,7 +273,7 @@ public class ProjectworkTest {
         Thread.sleep(5000);
     }
    
-    //@Test (priority=6)
+    @Test (priority=6)
 
     /**
      * Verify end to end Appointment booking (work in progress) 
@@ -284,8 +290,8 @@ public class ProjectworkTest {
         driver.findElement(By.xpath("//p[contains(.,'APPOINTMENT')]"));
         
         driver.switchTo().frame(0);
-        driver.findElement(By.xpath("//*[@id=\"7da72496-1c7e-4256-a4a7-fedf355bfd93\"]/div[1]/bks-offering-tile/boost-service-tile/ng-include/div/div[2]/button"));
-        driver.findElement(By.xpath("//button[contains(.,'Book It')]")).click();
+        driver.findElement(By.xpath("//*[@id=\"7da72496-1c7e-4256-a4a7-fedf355bfd93\"]/div[1]/bks-offering-tile/boost-service-tile/ng-include/div/div[2]/button")).click();
+        //driver.findElement(By.xpath("//button[contains(.,'Book It')]")).click();
         Thread.sleep(4000);
 
         driver.findElement(By.xpath("//div[4]/div/table/tbody/tr/td[7]")).click();
