@@ -79,7 +79,7 @@ public class ProjectworkTest {
      *
      * @throws Exception
      */
-    @Test (priority=0)
+    @Test (priority=6)
     public void testItexpsNavigation() throws Exception {
         FileUtil fileutil = new FileUtil();
         
@@ -273,13 +273,12 @@ public class ProjectworkTest {
         Thread.sleep(5000);
     }
    
-    @Test (priority=6)
-
     /**
      * Verify end to end Appointment booking (work in progress) 
      * 
      * @throws Exception
      */
+    @Test (priority=0)
     public void testAppointment() throws Exception {
         driver.get("https://www.itexps.net/");
         
@@ -293,11 +292,21 @@ public class ProjectworkTest {
         driver.findElement(By.xpath("//*[@id=\"7da72496-1c7e-4256-a4a7-fedf355bfd93\"]/div[1]/bks-offering-tile/boost-service-tile/ng-include/div/div[2]/button")).click();
         //driver.findElement(By.xpath("//button[contains(.,'Book It')]")).click();
         Thread.sleep(7000);
-
         driver.findElement(By.xpath("//div[4]/div/table/tbody/tr/td[7]")).click();
-        Thread.sleep(4000);
-        driver.findElement(By.xpath("/html/body/main/div/bks-app/div/div[1]/boost-calendar-page/div[2]/div/div/div/ul/boost-time-slots-list[1]/li/div[4]/span")).click();
+        //driver.findElement(By.className(".fc-day-active")).click();
+         ///html/body/main/div/bks-app/div/div[1]/boost-calendar-page/div[2]/div/div/boost-visitor-calendar-controls/div/div[1]/div/div[2]/boost-visitor-calendar/div/div/div/table/tbody/tr/td/div/div/div[4]/div[1]/table/tbody/tr/td[7]       
+        //
+        driver.findElement(By.xpath("//span[contains(.,'10:00 am')]")).click();
+        
+      
+        
+        //driver.findElement(By.xpath("//*[@id=\"74befb26-b818-41c4-94ff-86c212f77ba4\"]/div[4]/div/table/tbody/tr/td[7]")).click();
+        Thread.sleep(7000);
+        //        driver.findElement(By.xpath("/html/body/main/div/bks-app/div/div[1]/boost-calendar-page/div[2]/div/div/div/ul/boost-time-slots-list[1]/li/div[4]/span"));
+        //        driver.findElement(By.xpath("//li/div[4]/div"));
+        // /html/body/main/div/bks-app/div/div[1]/boost-calendar-page/div[2]/div/div/div/ul/boost-time-slots-list[1]/li/div[4]/span
         driver.findElement(By.xpath("//div[@id='mCSB_2_container']/boost-staff-picker/div/div[2]/div[2]/div")).click();
+        //        driver.findElement(By.xpath("//boost-staff-picker/div/div[2]/div[2]/div")).click();
 
         Thread.sleep(4000);
         driver.findElement(By.xpath("//boost-next-step-label/span"));
@@ -320,6 +329,7 @@ public class ProjectworkTest {
         driver.findElement(By.id("d226d4f9-a3fa-4ad5-b0b2-03abd275e32a")).clear();
         driver.findElement(By.id("d226d4f9-a3fa-4ad5-b0b2-03abd275e32a")).sendKeys("This is a test for the selenium project - Pls ignore");
         
+        Thread.sleep(4000);
         //driver.findElement(By.xpath("/html/body/main/div/bks-app/div/div[1]/bks-contact-info-page/section/div[2]/boost-visitor-sidebar/section/div[1]/div[1]/button/boost-next-step-label/span")).click();
                 
         driver.switchTo().defaultContent();
